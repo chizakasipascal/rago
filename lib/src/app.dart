@@ -16,7 +16,7 @@ class Rago extends StatelessWidget {
     ]);
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       systemNavigationBarColor: slateBlue, // navigation bar color
-      statusBarColor: Colors.transparent, // status bar color
+      statusBarColor: slateBlue, // status bar color
     ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
