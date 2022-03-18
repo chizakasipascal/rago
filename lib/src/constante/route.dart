@@ -11,7 +11,7 @@ class Routes {
   static const login = '/login';
   static const contact = '/log';
   static const apropos = '/about';
-  static const top = '/top10';
+  static const emissions = '/emissions';
 
   static final routes = <String, WidgetBuilder>{
     initPage: (BuildContext context) => const Splash(),
@@ -22,6 +22,6 @@ class Routes {
     login: (BuildContext context) => const Login(),
     contact: (BuildContext context) => const Contact(),
     apropos: (BuildContext context) => const About(),
-    top: (BuildContext context) => const Top(),
+    emissions: (BuildContext context) => const Emissions(),
   };
 }

@@ -42,7 +42,10 @@ class Acceuil extends StatelessWidget {
                       left: 170,
                       bottom: 0,
                       child: GestureDetector(
-                        onTap: () => print("object"),
+                        onTap: () => Navigator.pushNamed(
+                          context,
+                          Routes.emissions,
+                        ),
                         child: Container(
                           width: size.width * .6,
                           height: 50,
