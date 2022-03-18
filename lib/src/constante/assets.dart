@@ -14,10 +14,12 @@ class Assets {
   static const String contactradio = "${pathAssetsImage}contact_radio.png";
   static const String emission = "${pathAssetsImage}EMISSION.png";
   static const String icon = "${pathAssetsImage}icon.png";
-  static const String micro = "${pathAssetsImage}micro.png";
+  static const String micro = "${pathAssetsImage}micro.jpg";
   static const String notification = "${pathAssetsImage}notification.png";
   static const String pngwave = "${pathAssetsImage}png_wave.png";
   static const String top = "${pathAssetsImage}top_10.png";
   static const String logoRago = "${pathAssetsImage}RAGO_LOGO.png";
   static const String logoRagoS = "${pathAssetsImage}RAGO_LOGOs.png";
+
+  static const String wave = "${pathAssetsJson}wave.json";
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rago/src/constante/assets.dart';
 import 'package:rago/src/constante/fontSize.dart';
 import 'package:rago/src/constante/icon_size.dart';
@@ -22,7 +23,7 @@ class Acceuil extends StatelessWidget {
                 height: size.height * .5,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(Assets.micro),
+                    image: AssetImage(Assets.appp),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -38,61 +39,70 @@ class Acceuil extends StatelessWidget {
                   children: [
                     Positioned(
                       left: 170,
+                      bottom: 0,
                       child: GestureDetector(
                         onTap: () => print("object"),
                         child: Container(
                           width: size.width * .6,
-                          height: 70,
+                          height: 50,
                           color: slateBlue,
                           child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Programme",
-                                  style: TextStyle(
-                                    color: whiteColor,
-                                    fontSize: FontSize.lard,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 10.0, left: 5.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: const [
+                                  Text(
+                                    "Programme",
+                                    style: TextStyle(
+                                      color: whiteColor,
+                                      fontSize: FontSize.small,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(width: 50),
-                                Icon(
-                                  Icons.radio,
-                                  size: IconSize.sizeIcon,
-                                  color: whiteColor,
-                                )
-                              ],
+                                  Icon(
+                                    Icons.radio,
+                                    size: IconSize.sizeIcon,
+                                    color: whiteColor,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      width: size.width * .5,
-                      height: 70,
-                      decoration: const BoxDecoration(
-                        color: whiteColor,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(25),
-                          bottomRight: Radius.circular(25),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        width: size.width * .54,
+                        height: 50,
+                        decoration: const BoxDecoration(
+                          color: whiteColor,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(25),
+                            bottomRight: Radius.circular(25),
+                          ),
                         ),
-                      ),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
-                            Text(
-                              "Acceuil",
-                              style: TextStyle(
-                                fontSize: FontSize.lard,
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: const [
+                              Text(
+                                "Acceuil",
+                                style: TextStyle(
+                                  color: slateBlue,
+                                  fontSize: FontSize.small,
+                                ),
                               ),
-                            ),
-                            Icon(
-                              Icons.home,
-                              size: IconSize.sizeIcon,
-                              color: slateBlue,
-                            )
-                          ],
+                              Icon(
+                                Icons.home,
+                                size: IconSize.sizeIcon,
+                                color: slateBlue,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -104,7 +114,7 @@ class Acceuil extends StatelessWidget {
               clipper: BottomWaveClipper(),
               child: Container(
                 width: size.width,
-                height: size.height * .5,
+                height: size.height * .67,
                 decoration: const BoxDecoration(
                   color: slateBlue,
                 ),
@@ -118,8 +128,8 @@ class Acceuil extends StatelessWidget {
                     Center(
                       child: SizedBox(
                         height: 250,
-                        child: Image.asset(
-                          Assets.pngwave,
+                        child: Lottie.asset(
+                          Assets.wave,
                           fit: BoxFit.cover,
                         ),
                       ),
