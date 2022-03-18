@@ -15,7 +15,7 @@ class Emissions extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.only(top: 10.0, left: 10, right: 10),
           child: Column(
             children: [
               Center(
@@ -54,6 +54,7 @@ class Emissions extends StatelessWidget {
                   color: grey,
                 ),
               ),
+              const Divider(),
               const SizedBox(height: 10),
               Row(
                 children: [
@@ -63,8 +64,6 @@ class Emissions extends StatelessWidget {
                       width: size.width * .5,
                       decoration: BoxDecoration(
                         color: grey.withOpacity(.2),
-                        // border:
-                        //  Border.all(color: grey.withOpacity(.3), width: 5),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Stack(
@@ -151,28 +150,30 @@ class Emissions extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              const Spacer(),
-              Container(
-                height: 130,
-                width: size.width,
-                decoration: BoxDecoration(
-                  color: slateBlue,
-                  borderRadius: BorderRadius.circular(10),
+            ],
+          ),
+        ),
+        bottomNavigationBar: Container(
+          height: 80,
+          width: size.width,
+          decoration: const BoxDecoration(
+            color: slateBlue,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10),
+              topRight: Radius.circular(10),
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "DIFFUSER VOTRE ÉMISSION",
+                style: GoogleFonts.roboto(
+                  fontSize: FontSize.lard,
+                  fontWeight: FontWeight.bold,
+                  color: whiteColor,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "DIFFUSER VOTRE ÉMISSION",
-                      style: GoogleFonts.roboto(
-                        fontSize: FontSize.lard,
-                        fontWeight: FontWeight.bold,
-                        color: whiteColor,
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              ),
             ],
           ),
         ),
