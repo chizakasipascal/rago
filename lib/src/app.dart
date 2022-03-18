@@ -22,6 +22,7 @@ class Rago extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       title: Strings.appName,
+      initialRoute: Routes.acceuil,
       home: const HomeScreen(),
       routes: Routes.routes,
     );

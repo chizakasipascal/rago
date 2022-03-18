@@ -18,4 +18,6 @@ class Assets {
   static const String notification = "${pathAssetsImage}notification.png";
   static const String pngwave = "${pathAssetsImage}png_wave.png";
   static const String top = "${pathAssetsImage}top_10.png";
+  static const String logoRago = "${pathAssetsImage}RAGO_LOGO.png";
+  static const String logoRagoS = "${pathAssetsImage}RAGO_LOGOs.png";
 }
