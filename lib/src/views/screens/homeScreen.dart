@@ -25,13 +25,16 @@ class HomeScreen extends StatelessWidget {
                       child: ListView.builder(
                         itemBuilder: (context, index) {
                           return Container(
-                            height: 60,
-                            width: 60,
-                            margin: const EdgeInsets.all(5.0),
+                            height: 50,
+                            width: 50,
+                            margin: const EdgeInsets.all(3),
                             decoration: BoxDecoration(
-                              color: whiteColor,
                               shape: BoxShape.circle,
-                              border: Border.all(color: slateBlue, width: 2),
+                              border: Border.all(color: slateBlue, width: 3),
+                              image: const DecorationImage(
+                                image: AssetImage(Assets.radioOn),
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           );
                         },
