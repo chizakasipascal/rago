@@ -131,8 +131,8 @@ class Acceuil extends StatelessWidget {
                 child: Stack(
                   children: [
                     SizedBox(
-                      height: 100,
-                      width: 100,
+                      height: 150,
+                      width: 150,
                       child: Image.asset(Assets.logoRago, fit: BoxFit.cover),
                     ),
                     Center(
