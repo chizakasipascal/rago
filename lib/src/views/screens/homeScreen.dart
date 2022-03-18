@@ -24,18 +24,33 @@ class HomeScreen extends StatelessWidget {
                       flex: 2,
                       child: ListView.builder(
                         itemBuilder: (context, index) {
-                          return Container(
-                            height: 50,
-                            width: 50,
-                            margin: const EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: slateBlue, width: 3),
-                              image: const DecorationImage(
-                                image: AssetImage(Assets.radioOn),
-                                fit: BoxFit.contain,
+                          return Column(
+                            children: [
+                              Container(
+                                height: 50,
+                                width: 50,
+                                margin: const EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: slateBlue, width: 3),
+                                  image: const DecorationImage(
+                                    image: AssetImage(Assets.radioOn),
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
                               ),
-                            ),
+                              const Text(
+                                "Radio\n102.8fm",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: grey,
+                                ),
+                              ),
+                              const Divider()
+                            ],
                           );
                         },
                         itemCount: 20,
