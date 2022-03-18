@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:rago/src/constante/assets.dart';
 import 'package:rago/src/constante/fontSize.dart';
 import 'package:rago/src/constante/icon_size.dart';
+import 'package:rago/src/constante/route.dart';
 import 'package:rago/src/utils/colors.dart';
 
 class Acceuil extends StatelessWidget {
@@ -75,33 +76,39 @@ class Acceuil extends StatelessWidget {
                     ),
                     Positioned(
                       bottom: 0,
-                      child: Container(
-                        width: size.width * .54,
-                        height: 50,
-                        decoration: const BoxDecoration(
-                          color: whiteColor,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(25),
-                            bottomRight: Radius.circular(25),
-                          ),
+                      child: GestureDetector(
+                        onTap: () => Navigator.pushNamed(
+                          context,
+                          Routes.homeScreen,
                         ),
-                        child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: const [
-                              Text(
-                                "Acceuil",
-                                style: TextStyle(
-                                  color: slateBlue,
-                                  fontSize: FontSize.small,
+                        child: Container(
+                          width: size.width * .54,
+                          height: 50,
+                          decoration: const BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(25),
+                              bottomRight: Radius.circular(25),
+                            ),
+                          ),
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: const [
+                                Text(
+                                  "Acceuil",
+                                  style: TextStyle(
+                                    color: slateBlue,
+                                    fontSize: FontSize.small,
+                                  ),
                                 ),
-                              ),
-                              Icon(
-                                Icons.home,
-                                size: IconSize.sizeIcon,
-                                color: slateBlue,
-                              )
-                            ],
+                                Icon(
+                                  Icons.home,
+                                  size: IconSize.sizeIcon,
+                                  color: slateBlue,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

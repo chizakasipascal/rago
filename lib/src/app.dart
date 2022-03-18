@@ -22,7 +22,7 @@ class Rago extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       title: Strings.appName,
-      initialRoute: Routes.acceuil,
+      initialRoute: Routes.login,
       home: const HomeScreen(),
       routes: Routes.routes,
     );
