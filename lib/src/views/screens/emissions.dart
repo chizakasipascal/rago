@@ -7,7 +7,7 @@ import 'package:rago/src/constante/fontSize.dart';
 import 'package:rago/src/utils/colors.dart';
 
 class Emissions extends StatelessWidget {
-  const Emissions({Key? key}) : super(key: key);
+  const Emissions({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

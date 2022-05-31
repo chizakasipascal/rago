@@ -7,13 +7,13 @@ typedef String Validator(string);
 typedef void OnSaved(string);
 
 Widget buildTextBox(
-    {String? hint,
-    Widget? suffixIcon,
-    Widget? prefixIcon,
-    TextEditingController? controller,
-    String? label,
-    Validator? validator,
-    OnSaved? onSaved,
+    {String hint,
+    Widget suffixIcon,
+    Widget prefixIcon,
+    TextEditingController controller,
+    String label,
+    Validator validator,
+    OnSaved onSaved,
     TextInputType inputType = TextInputType.text,
     bool enable = true,
     bool isPassword = false}) {

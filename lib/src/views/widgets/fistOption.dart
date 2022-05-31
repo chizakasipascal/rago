@@ -4,13 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rago/src/utils/colors.dart';
 
 class FirstOptions extends StatelessWidget {
-  final String? description;
-  final Widget? widget;
-  final Color? color;
+  final String description;
+  final Widget widget;
+  final Color color;
   final bool indexSelect;
-  final VoidCallback? onTap;
+  final VoidCallback onTap;
   const FirstOptions({
-    Key? key,
+    key,
     this.description,
     this.widget,
     this.color,
@@ -43,7 +43,7 @@ class FirstOptions extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              description!,
+              description,
               style: GoogleFonts.roboto(
                 textStyle: const TextStyle(
                   color: grey,

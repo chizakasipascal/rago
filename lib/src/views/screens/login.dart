@@ -9,7 +9,7 @@ import 'package:rago/src/views/widgets/textbox/text_box.dart';
 import '../../constante/assets.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({key}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();

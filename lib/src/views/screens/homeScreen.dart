@@ -3,7 +3,7 @@ import 'package:rago/src/constante/assets.dart';
 import 'package:rago/src/utils/colors.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

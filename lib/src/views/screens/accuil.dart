@@ -7,7 +7,7 @@ import 'package:rago/src/constante/route.dart';
 import 'package:rago/src/utils/colors.dart';
 
 class Acceuil extends StatelessWidget {
-  const Acceuil({Key? key}) : super(key: key);
+  const Acceuil({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
