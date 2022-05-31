@@ -7,7 +7,7 @@ import 'package:rago/src/utils/colors.dart';
 import 'package:rago/src/views/screens/homeScreen.dart';
 
 class Rago extends StatelessWidget {
-  const Rago({Key? key}) : super(key: key);
+  const Rago({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,7 @@ class Rago extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: themeData,
       title: Strings.appName,
+      initialRoute: Routes.login,
       home: const HomeScreen(),
       routes: Routes.routes,
     );
