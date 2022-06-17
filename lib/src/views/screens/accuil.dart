@@ -49,7 +49,7 @@ class Acceuil extends StatelessWidget {
                         child: Container(
                           width: size.width * .6,
                           height: 50,
-                          color: slateBlue,
+                          color: kBlue,
                           child: Center(
                             child: Padding(
                               padding:
@@ -61,14 +61,14 @@ class Acceuil extends StatelessWidget {
                                   Text(
                                     "Programme",
                                     style: TextStyle(
-                                      color: whiteColor,
+                                      color: kWhiteColor,
                                       fontSize: FontSize.small,
                                     ),
                                   ),
                                   Icon(
                                     Icons.radio,
                                     size: IconSize.sizeIcon,
-                                    color: whiteColor,
+                                    color: kWhiteColor,
                                   )
                                 ],
                               ),
@@ -88,7 +88,7 @@ class Acceuil extends StatelessWidget {
                           width: size.width * .54,
                           height: 50,
                           decoration: const BoxDecoration(
-                            color: whiteColor,
+                            color: kWhiteColor,
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(25),
                               bottomRight: Radius.circular(25),
@@ -101,14 +101,14 @@ class Acceuil extends StatelessWidget {
                                 Text(
                                   "Acceuil",
                                   style: TextStyle(
-                                    color: slateBlue,
+                                    color: kBlue,
                                     fontSize: FontSize.small,
                                   ),
                                 ),
                                 Icon(
                                   Icons.home,
                                   size: IconSize.sizeIcon,
-                                  color: slateBlue,
+                                  color: kBlue,
                                 )
                               ],
                             ),
@@ -126,7 +126,7 @@ class Acceuil extends StatelessWidget {
                 width: size.width,
                 height: size.height * .67,
                 decoration: const BoxDecoration(
-                  color: slateBlue,
+                  color: kBlue,
                 ),
                 child: Stack(
                   children: [

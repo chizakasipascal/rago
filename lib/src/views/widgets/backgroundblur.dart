@@ -9,7 +9,7 @@ class BackgroundBlur extends StatelessWidget {
     key,
     this.sigmaX = 5.0,
     this.sigmaY = 5.0,
-    this.child,
+    required this.child,
   }) : super(key: key);
 
   @override

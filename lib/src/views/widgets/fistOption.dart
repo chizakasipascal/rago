@@ -11,11 +11,11 @@ class FirstOptions extends StatelessWidget {
   final VoidCallback onTap;
   const FirstOptions({
     key,
-    this.description,
-    this.widget,
-    this.color,
+    required this.description,
+    required this.widget,
+    required this.color,
     this.indexSelect = true,
-    this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -29,7 +29,7 @@ class FirstOptions extends StatelessWidget {
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(40),
           border: Border.all(
-            color: indexSelect ? slateBlue : grey.withOpacity(.5),
+            color: indexSelect ? kBlue : kGrey.withOpacity(.5),
             width: 2.0,
           ),
         ),
@@ -46,7 +46,7 @@ class FirstOptions extends StatelessWidget {
               description,
               style: GoogleFonts.roboto(
                 textStyle: const TextStyle(
-                  color: grey,
+                  color: kGrey,
                   letterSpacing: .5,
                   fontWeight: FontWeight.bold,
                 ),
