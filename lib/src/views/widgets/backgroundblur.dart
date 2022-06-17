@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:rago/src/utils/colors.dart';
 
 class BackgroundBlur extends StatelessWidget {
   final Widget child;
@@ -18,6 +19,11 @@ class BackgroundBlur extends StatelessWidget {
       filter: ImageFilter.blur(sigmaX: sigmaX, sigmaY: sigmaY),
       child: Stack(
         children: [
+          Container(
+            color: kBlue,
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+          ),
           child,
         ],
       ),

@@ -18,6 +18,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
+    final isKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Padding(
@@ -25,14 +26,16 @@ class _LoginState extends State<Login> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 100,
-              width: 100,
-              child: Image.asset(
-                Assets.logoRagoS,
-                fit: BoxFit.cover,
-              ),
-            ),
+            !isKeyboard
+                ? SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: Image.asset(
+                      Assets.logoRagoS,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                : const SizedBox.shrink(),
             Container(
               height: size.height * .5,
               width: size.width,

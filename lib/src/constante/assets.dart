@@ -24,4 +24,5 @@ class Assets {
   static const String wave = "${pathAssetsJson}wave.json";
   static const String podcast = "${pathAssetsJson}podcast.svg";
   static const String favorite = "${pathAssetsJson}favorite.json";
+  static const String welcome = "${pathAssetsJson}welcome.json";
 }
