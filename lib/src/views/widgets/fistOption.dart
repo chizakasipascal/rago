@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-import 'package:rago/src/utils/colors.dart';
+import 'package:ragotheme/ragotheme.dart';
 
 class FirstOptions extends StatelessWidget {
   final String description;
@@ -29,7 +28,7 @@ class FirstOptions extends StatelessWidget {
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(40),
           border: Border.all(
-            color: indexSelect ? kBlue : kGrey.withOpacity(.5),
+            color: indexSelect ? kRago : kGreyColor.withOpacity(.5),
             width: 2.0,
           ),
         ),
@@ -44,13 +43,6 @@ class FirstOptions extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
               description,
-              style: GoogleFonts.roboto(
-                textStyle: const TextStyle(
-                  color: kGrey,
-                  letterSpacing: .5,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
             ),
           ],
         ),

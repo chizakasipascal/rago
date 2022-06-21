@@ -1,30 +1,41 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:rago/src/utils/colors.dart';
 
-class BackgroundBlur extends StatelessWidget {
+import '../../constante/assets.dart';
+
+class BuildBackground extends StatelessWidget {
   final Widget child;
-  final double sigmaX;
-  final double sigmaY;
-  const BackgroundBlur({
-    key,
-    this.sigmaX = 5.0,
-    this.sigmaY = 5.0,
-    required this.child,
-  }) : super(key: key);
+  final double sigmaX, sigmaY;
 
+  const BuildBackground(
+      {super.key, required this.child, this.sigmaX = 3.0, this.sigmaY = 3.0});
   @override
   Widget build(BuildContext context) {
-    return BackdropFilter(
-      filter: ImageFilter.blur(sigmaX: sigmaX, sigmaY: sigmaY),
-      child: Stack(
-        children: [
-          Container(
-            color: kBlue,
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 20,
+            left: 20,
+            child: SizedBox(
+              height: 100,
+              width: 100,
+              child: Image.asset(
+                Assets.logoRagoS,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-          child,
+          ConstrainedBox(
+            constraints: const BoxConstraints.expand(),
+            child: const FlutterLogo(),
+          ),
+          BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: sigmaX, sigmaY: sigmaY),
+            child: child,
+          ),
         ],
       ),
     );

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rago/src/constante/fontSize.dart';
 import 'package:rago/src/constante/route.dart';
-import 'package:rago/src/constante/splashRadiusIconsButtom.dart';
-import 'package:rago/src/utils/colors.dart';
-import 'package:rago/src/views/widgets/textbox/text_box.dart';
-
+import 'package:ragotheme/ragotheme.dart';
 import '../../constante/assets.dart';
+import '../../constante/splashRadiusIconsButtom.dart';
+import '../widgets/backgroundblur.dart';
+import '../widgets/textbox/text_box.dart';
 
 class Login extends StatefulWidget {
   const Login({key}) : super(key: key);
@@ -20,8 +19,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final isKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Padding(
+    return BuildBackground(
+      child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,22 +47,15 @@ class _LoginState extends State<Login> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Login",
-                      style: GoogleFonts.roboto(
-                        textStyle: const TextStyle(
-                          color: kGrey,
-                          fontSize: FontSize.lard,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
                     ),
                     const SizedBox(height: 20),
                     const SizedBox(height: 5),
                     Container(
                       height: 45,
                       decoration: BoxDecoration(
-                        border: Border.all(color: kBlue),
+                        border: Border.all(color: kRago),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
@@ -81,7 +73,7 @@ class _LoginState extends State<Login> {
                     Container(
                       height: 45,
                       decoration: BoxDecoration(
-                        border: Border.all(color: kBlue),
+                        border: Border.all(color: kRago),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
@@ -111,14 +103,8 @@ class _LoginState extends State<Login> {
                           ),
                           onPressed: () => Navigator.pushReplacementNamed(
                               context, Routes.acceuil),
-                          child: Text(
+                          child: const Text(
                             "Connexion",
-                            style: GoogleFonts.roboto(
-                              textStyle: const TextStyle(
-                                color: kWhiteColor,
-                                fontSize: FontSize.small,
-                              ),
-                            ),
                           ),
                         ),
                       ),

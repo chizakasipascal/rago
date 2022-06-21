@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rago/src/constante/assets.dart';
-import 'package:rago/src/constante/fontSize.dart';
-import 'package:rago/src/constante/icon_size.dart';
+
 import 'package:rago/src/constante/route.dart';
-import 'package:rago/src/utils/colors.dart';
+import 'package:ragotheme/ragotheme.dart';
 
 class Acceuil extends StatelessWidget {
   const Acceuil({key}) : super(key: key);
@@ -49,7 +48,7 @@ class Acceuil extends StatelessWidget {
                         child: Container(
                           width: size.width * .6,
                           height: 50,
-                          color: kBlue,
+                          color: kRago,
                           child: Center(
                             child: Padding(
                               padding:
@@ -60,14 +59,9 @@ class Acceuil extends StatelessWidget {
                                 children: const [
                                   Text(
                                     "Programme",
-                                    style: TextStyle(
-                                      color: kWhiteColor,
-                                      fontSize: FontSize.small,
-                                    ),
                                   ),
                                   Icon(
                                     Icons.radio,
-                                    size: IconSize.sizeIcon,
                                     color: kWhiteColor,
                                   )
                                 ],
@@ -100,15 +94,10 @@ class Acceuil extends StatelessWidget {
                               children: const [
                                 Text(
                                   "Acceuil",
-                                  style: TextStyle(
-                                    color: kBlue,
-                                    fontSize: FontSize.small,
-                                  ),
                                 ),
                                 Icon(
                                   Icons.home,
-                                  size: IconSize.sizeIcon,
-                                  color: kBlue,
+                                  color: kRago,
                                 )
                               ],
                             ),
@@ -126,7 +115,7 @@ class Acceuil extends StatelessWidget {
                 width: size.width,
                 height: size.height * .67,
                 decoration: const BoxDecoration(
-                  color: kBlue,
+                  color: kRago,
                 ),
                 child: Stack(
                   children: [
