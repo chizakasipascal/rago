@@ -3,12 +3,12 @@ import 'package:rago/src/utils/colors.dart';
 
 final ThemeData themeData = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  scaffoldBackgroundColor: whiteTrasparent,
-  backgroundColor: background,
-  primaryColor: background,
+  scaffoldBackgroundColor: kWhiteTrasparent,
+  backgroundColor: kBackground,
+  primaryColor: kBackground,
   textSelectionTheme: TextSelectionThemeData(
-    cursorColor: grey.withOpacity(.5),
+    cursorColor: kGrey.withOpacity(.5),
   ),
-  splashColor: background,
-  colorScheme: ColorScheme.fromSwatch().copyWith(secondary: background),
+  splashColor: kBlue.withOpacity(.4),
+  colorScheme: ColorScheme.fromSwatch().copyWith(secondary: kBackground),
 );

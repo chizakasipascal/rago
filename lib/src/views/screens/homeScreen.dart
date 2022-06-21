@@ -32,8 +32,7 @@ class HomeScreen extends StatelessWidget {
                                 margin: const EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(color: slateBlue, width: 3),
+                                  border: Border.all(color: kBlue, width: 3),
                                   image: const DecorationImage(
                                     image: AssetImage(Assets.radioOn),
                                     fit: BoxFit.contain,
@@ -46,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.normal,
-                                  color: grey,
+                                  color: kGrey,
                                 ),
                               ),
                               const Divider()
@@ -61,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                     const VerticalDivider(
                       width: 0,
                       thickness: 1,
-                      color: grey,
+                      color: kGrey,
                     ),
                     Expanded(
                       flex: 8,
@@ -85,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: 30,
                                         fontWeight: FontWeight.bold,
-                                        color: red,
+                                        color: kRed,
                                       ),
                                     ),
                                     Spacer(),
@@ -94,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.normal,
-                                        color: grey,
+                                        color: kGrey,
                                       ),
                                     ),
                                   ],
@@ -136,7 +135,7 @@ class HomeScreen extends StatelessWidget {
                                             width: 45,
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                color: grey.withOpacity(.3),
+                                                color: kGrey.withOpacity(.3),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
@@ -148,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                                             width: 45,
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                color: grey.withOpacity(.3),
+                                                color: kGrey.withOpacity(.3),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
@@ -161,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                                             width: 45,
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                color: grey.withOpacity(.3),
+                                                color: kGrey.withOpacity(.3),
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
@@ -182,7 +181,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    color: blackColor,
+                                    color: kBlackColor,
                                   ),
                                 ),
                               ),
@@ -194,7 +193,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.normal,
-                                    color: grey,
+                                    color: kGrey,
                                   ),
                                 ),
                               ),
@@ -215,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
-                                          color: blackColor,
+                                          color: kBlackColor,
                                         ),
                                       ),
                                       SizedBox(width: 10),
@@ -224,7 +223,7 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
-                                          color: blackColor,
+                                          color: kBlackColor,
                                         ),
                                       ),
                                     ],
@@ -242,14 +241,14 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,
-                                          color: blackColor,
+                                          color: kBlackColor,
                                         ),
                                       ),
                                       Text(
                                         "voir plus >",
                                         style: TextStyle(
                                           fontWeight: FontWeight.normal,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                     ],
@@ -261,7 +260,7 @@ class HomeScreen extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-                                      color: blackColor,
+                                      color: kBlackColor,
                                     ),
                                   ),
                                   subtitle: Row(
@@ -273,14 +272,14 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontWeight: FontWeight.normal,
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                       Text(
                                         " ALIN CHUMA",
                                         style: TextStyle(
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                     ],
@@ -297,7 +296,7 @@ class HomeScreen extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-                                      color: blackColor,
+                                      color: kBlackColor,
                                     ),
                                   ),
                                   subtitle: Row(
@@ -309,14 +308,14 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontWeight: FontWeight.normal,
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                       Text(
                                         " KITOTKO sHUKURU",
                                         style: TextStyle(
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                     ],
@@ -333,7 +332,7 @@ class HomeScreen extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
-                                      color: blackColor,
+                                      color: kBlackColor,
                                     ),
                                   ),
                                   subtitle: Row(
@@ -345,14 +344,14 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontWeight: FontWeight.normal,
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                       Text(
                                         " ALIN CHUMA",
                                         style: TextStyle(
                                           fontSize: 10,
-                                          color: grey,
+                                          color: kGrey,
                                         ),
                                       ),
                                     ],
@@ -379,7 +378,7 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   height: size.height / 9,
                   decoration: BoxDecoration(
-                    color: whiteColor,
+                    color: kWhiteColor,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(.2),
@@ -399,7 +398,7 @@ class HomeScreen extends StatelessWidget {
                               onPressed: () {},
                               icon: const Icon(
                                 Icons.menu,
-                                color: blackColor,
+                                color: kBlackColor,
                               ),
                             ),
                           ),
@@ -417,7 +416,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
-                                    color: blackColor,
+                                    color: kBlackColor,
                                   ),
                                 ),
                                 Text(
@@ -425,7 +424,7 @@ class HomeScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.normal,
-                                    color: grey,
+                                    color: kGrey,
                                   ),
                                 ),
                               ],
@@ -433,7 +432,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         FloatingActionButton(
-                          backgroundColor: whiteColor,
+                          backgroundColor: kWhiteColor,
                           onPressed: () {},
                           child: Container(
                             margin: const EdgeInsets.all(3),

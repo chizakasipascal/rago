@@ -23,10 +23,10 @@ class Emissions extends StatelessWidget {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: slateBlue,
+                    color: kBlue,
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: slateBlue,
+                      color: kBlue,
                       width: 2,
                     ),
                   ),
@@ -42,7 +42,7 @@ class Emissions extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   fontSize: FontSize.meduim,
                   fontWeight: FontWeight.bold,
-                  color: grey,
+                  color: kGrey,
                 ),
               ),
               const SizedBox(height: 10),
@@ -51,7 +51,7 @@ class Emissions extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   fontSize: FontSize.small,
                   fontWeight: FontWeight.normal,
-                  color: grey,
+                  color: kGrey,
                 ),
               ),
               const Divider(),
@@ -63,7 +63,7 @@ class Emissions extends StatelessWidget {
                       height: size.height * .3,
                       width: size.width * .5,
                       decoration: BoxDecoration(
-                        color: grey.withOpacity(.2),
+                        color: kGrey.withOpacity(.2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Stack(
@@ -88,7 +88,7 @@ class Emissions extends StatelessWidget {
                                 style: GoogleFonts.roboto(
                                   fontSize: FontSize.lard + 10,
                                   fontWeight: FontWeight.bold,
-                                  color: grey,
+                                  color: kGrey,
                                 ),
                               ),
                             ),
@@ -103,9 +103,9 @@ class Emissions extends StatelessWidget {
                       height: size.height * .3,
                       width: size.width * .5,
                       decoration: BoxDecoration(
-                        color: whiteColor,
+                        color: kWhiteColor,
                         border: Border.all(
-                          color: grey.withOpacity(.3),
+                          color: kGrey.withOpacity(.3),
                           width: 3,
                         ),
                         borderRadius: BorderRadius.circular(10),
@@ -138,7 +138,7 @@ class Emissions extends StatelessWidget {
                                 style: GoogleFonts.roboto(
                                   fontSize: FontSize.lard + 9,
                                   fontWeight: FontWeight.bold,
-                                  color: slateBlue,
+                                  color: kBlue,
                                 ),
                               ),
                             ),
@@ -156,7 +156,7 @@ class Emissions extends StatelessWidget {
           height: 80,
           width: size.width,
           decoration: const BoxDecoration(
-            color: slateBlue,
+            color: kBlue,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
@@ -170,7 +170,7 @@ class Emissions extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   fontSize: FontSize.lard,
                   fontWeight: FontWeight.bold,
-                  color: whiteColor,
+                  color: kWhiteColor,
                 ),
               ),
             ],

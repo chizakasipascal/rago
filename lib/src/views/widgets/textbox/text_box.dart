@@ -7,13 +7,13 @@ typedef String Validator(string);
 typedef void OnSaved(string);
 
 Widget buildTextBox(
-    {String hint,
-    Widget suffixIcon,
-    Widget prefixIcon,
-    TextEditingController controller,
-    String label,
-    Validator validator,
-    OnSaved onSaved,
+    {String? hint,
+    Widget? suffixIcon,
+    Widget? prefixIcon,
+    TextEditingController? controller,
+    String? label,
+    Validator? validator,
+    OnSaved? onSaved,
     TextInputType inputType = TextInputType.text,
     bool enable = true,
     bool isPassword = false}) {
@@ -32,14 +32,14 @@ Widget buildTextBox(
       labelText: label,
       labelStyle: GoogleFonts.roboto(
         textStyle: const TextStyle(
-          color: grey,
+          color: kGrey,
           fontSize: FontSize.small,
         ),
       ),
       hintText: hint,
       hintStyle: GoogleFonts.roboto(
         textStyle: const TextStyle(
-          color: grey,
+          color: kGrey,
           fontSize: FontSize.small,
         ),
       ),
