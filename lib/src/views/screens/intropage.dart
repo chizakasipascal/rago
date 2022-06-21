@@ -113,18 +113,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(40.0),
+                          padding: const EdgeInsets.all(0.0),
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const <Widget>[
-                              Center(
-                                child: Image(
-                                  image: AssetImage(
-                                    Assets.logoRagoS,
-                                  ),
-                                  height: 300.0,
-                                  width: 300.0,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              const Image(
+                                image: AssetImage(
+                                  Assets.logoRagoS,
                                 ),
+                                height: 300.0,
+                                width: 300.0,
+                              ),
+                              Text(
+                                'Le leader dans le mode FM et \nde la communications.',
+                                textAlign: TextAlign.center,
+                                style: themeData.textTheme.bodyText2,
                               ),
                             ],
                           ),
