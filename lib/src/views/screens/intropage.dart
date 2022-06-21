@@ -30,12 +30,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Widget _indicator(bool isActive) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 150),
-      margin: const EdgeInsets.symmetric(horizontal: 8.0),
-      height: 7.0,
-      width: isActive ? 7.0 : 8.0,
+      duration: const Duration(milliseconds: 500),
+      margin: const EdgeInsets.symmetric(horizontal: 2.0),
+      height: 6.0,
+      width: isActive ? 6.0 : 6.0,
       decoration: BoxDecoration(
-        color: isActive ? Colors.red : Colors.black,
+        color: isActive ? kRago : kGreyColor,
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
@@ -45,138 +45,157 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return BuildBackground(
       child: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              alignment: Alignment.centerRight,
-              child: MaterialButton(
-                onPressed: () =>
-                    Navigator.popAndPushNamed(context, Routes.login),
-                child: const Text(
-                  'Skip',
+        child: Stack(
+          children: [
+            Positioned(
+              top: 40,
+              right: 5,
+              child: Container(
+                alignment: Alignment.centerRight,
+                child: MaterialButton(
+                  onPressed: () =>
+                      Navigator.popAndPushNamed(context, Routes.login),
+                  child: Text(
+                    'Skip',
+                    style: themeData.textTheme.button,
+                  ),
                 ),
               ),
             ),
-            SizedBox(
-              height: 600.0,
-              child: PageView(
-                physics: const ClampingScrollPhysics(),
-                controller: _pageController,
-                onPageChanged: (int page) {
-                  setState(() {
-                    _currentPage = page;
-                  });
-                },
+            Padding(
+              padding: EdgeInsets.only(top: (size.height * .2).toDouble()),
+              child: Column(
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(40.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  Container(
+                    height: size.height - (size.height * .4).toDouble(),
+                    padding: const EdgeInsets.only(top: 0),
+                    decoration: const BoxDecoration(
+                      color: kWhiteColor,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(30),
+                        topLeft: Radius.circular(30),
+                      ),
+                    ),
+                    child: PageView(
+                      physics: const BouncingScrollPhysics(),
+                      controller: _pageController,
+                      onPageChanged: (int page) {
+                        setState(() {
+                          _currentPage = page;
+                        });
+                      },
                       children: <Widget>[
-                        Center(
-                          child: Lottie.asset(Assets.welcome),
-                        ),
-                        //const SizedBox(height: 100.0),
-                        const Text(
-                          'Rago vous souhaite la bienvenue.',
-                        ),
-                        const SizedBox(height: 15.0),
-                        const Text(
-                          'Le leader dans le mode FM et \nde la communications.',
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(40.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        Center(
-                          child: Image(
-                            image: AssetImage(
-                              Assets.logoRagoS,
-                            ),
-                            height: 300.0,
-                            width: 300.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(40.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        Center(
-                          child: Image(
-                            image: AssetImage(
-                              Assets.logoRagoS,
-                            ),
-                            height: 300.0,
-                            width: 300.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            _currentPage != _numPages - 1
-                ? Expanded(
-                    child: Align(
-                      alignment: FractionalOffset.bottomCenter,
-                      child: MaterialButton(
-                        onPressed: () {
-                          _pageController.nextPage(
-                            duration: const Duration(milliseconds: 500),
-                            curve: Curves.bounceInOut,
-                          );
-                        },
-                        child: Row(
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: _buildPageIndicator(),
+                            Center(
+                              child: Lottie.asset(Assets.welcome),
                             ),
-                            const Spacer(),
-                            Text('Next', style: themeData.textTheme.bodyText1),
-                            const SizedBox(width: 10.0),
-                            const Icon(
-                              Icons.arrow_forward,
-                              color: kGreyColor,
-                              size: 16.0,
+                            //const SizedBox(height: 100.0),
+                            const Text(
+                              'Rago vous souhaite la bienvenue.',
+                            ),
+                            const SizedBox(height: 15.0),
+                            const Text(
+                              'Le leader dans le mode FM et \nde la communications.',
                             ),
                           ],
                         ),
-                      ),
-                    ),
-                  )
-                : const Text(''),
-            _currentPage == _numPages - 1
-                ? Container(
-                    width: double.infinity,
-                    color: Colors.black,
-                    child: GestureDetector(
-                      onTap: () =>
-                          Navigator.popAndPushNamed(context, Routes.login),
-                      child: const Center(
-                        child: Padding(
-                          padding: EdgeInsets.only(bottom: 5.0),
-                          child: Text(
-                            'Get Started',
+                        Padding(
+                          padding: const EdgeInsets.all(40.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const <Widget>[
+                              Center(
+                                child: Image(
+                                  image: AssetImage(
+                                    Assets.logoRagoS,
+                                  ),
+                                  height: 300.0,
+                                  width: 300.0,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.all(40.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const <Widget>[
+                              Center(
+                                child: Image(
+                                  image: AssetImage(
+                                    Assets.logoRagoS,
+                                  ),
+                                  height: 300.0,
+                                  width: 300.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
-                  )
-                : const SizedBox.shrink(),
+                  ),
+                  const Spacer(),
+                  _currentPage != _numPages - 1
+                      ? MaterialButton(
+                          onPressed: () {
+                            _pageController.nextPage(
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.bounceInOut,
+                            );
+                          },
+                          child: Row(
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: _buildPageIndicator(),
+                              ),
+                              const Spacer(),
+                              Text(
+                                'Next',
+                                style: themeData.textTheme.button,
+                              ),
+                              const SizedBox(width: 10.0),
+                              const Icon(
+                                Icons.arrow_forward,
+                                color: kGreyColor,
+                                size: 13.0,
+                              ),
+                            ],
+                          ),
+                        )
+                      : const SizedBox.shrink(),
+                  _currentPage == _numPages - 1
+                      ? Container(
+                          width: size.width,
+                          height: 50,
+                          color: Colors.green,
+                          child: GestureDetector(
+                            onTap: () => Navigator.popAndPushNamed(
+                                context, Routes.login),
+                            child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 5.0),
+                                child: Text(
+                                  'Get Started',
+                                  style: themeData.textTheme.headline6!
+                                      .copyWith(color: kWhiteColor),
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      : const SizedBox.shrink(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
