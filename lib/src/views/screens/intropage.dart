@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:rago/src/constante/assets.dart';
 
 import 'package:flutter/services.dart';
@@ -90,18 +89,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                       children: <Widget>[
                         Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            Center(
-                              child: Lottie.asset(Assets.welcome),
+                            const SizedBox(
+                              height: 250,
+                              width: 250,
+                              child: Placeholder(),
                             ),
-                            //const SizedBox(height: 100.0),
-                            const Text(
+                            const SizedBox(height: 10.0),
+                            Text(
                               'Rago vous souhaite la bienvenue.',
+                              style: themeData.textTheme.bodyLarge!.copyWith(
+                                color: kRago,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            const SizedBox(height: 15.0),
-                            const Text(
+                            const SizedBox(height: 5.0),
+                            Text(
                               'Le leader dans le mode FM et \nde la communications.',
+                              textAlign: TextAlign.center,
+                              style: themeData.textTheme.bodyText2,
                             ),
                           ],
                         ),
@@ -176,18 +183,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ? Container(
                           width: size.width,
                           height: 50,
-                          color: Colors.green,
+                          color: kRago,
                           child: GestureDetector(
                             onTap: () => Navigator.popAndPushNamed(
                                 context, Routes.login),
                             child: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.only(bottom: 5.0),
-                                child: Text(
-                                  'Get Started',
-                                  style: themeData.textTheme.headline6!
-                                      .copyWith(color: kWhiteColor),
-                                ),
+                              child: Text(
+                                'Get Started',
+                                style: themeData.textTheme.headline6!
+                                    .copyWith(color: kWhiteColor),
                               ),
                             ),
                           ),
