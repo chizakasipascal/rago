@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rago/src/constante/app_theme.dart';
+
 import 'package:rago/src/constante/route.dart';
 import 'package:rago/src/constante/strings.dart';
-import 'package:rago/src/utils/colors.dart';
+import 'package:ragotheme/ragotheme.dart';
 import 'package:rago/src/views/screens/intropage.dart';
 
 class Rago extends StatelessWidget {
@@ -15,7 +15,7 @@ class Rago extends StatelessWidget {
       DeviceOrientation.portraitUp,
     ]);
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      systemNavigationBarColor: kBlue, // navigation bar color
+      systemNavigationBarColor: kRago, // navigation bar color
       statusBarColor: Colors.transparent, // status bar color
     ));
     return MaterialApp(

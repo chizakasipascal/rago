@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:rago/src/constante/fontSize.dart';
-import 'package:rago/src/utils/colors.dart';
 
 typedef String Validator(string);
 typedef void OnSaved(string);
@@ -30,19 +27,7 @@ Widget buildTextBox(
       fillColor: Colors.transparent,
       contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 30.0, 10.0),
       labelText: label,
-      labelStyle: GoogleFonts.roboto(
-        textStyle: const TextStyle(
-          color: kGrey,
-          fontSize: FontSize.small,
-        ),
-      ),
       hintText: hint,
-      hintStyle: GoogleFonts.roboto(
-        textStyle: const TextStyle(
-          color: kGrey,
-          fontSize: FontSize.small,
-        ),
-      ),
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
     ),

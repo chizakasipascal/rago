@@ -13,10 +13,13 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  google_fonts: ^2.3.1
+
+  #
+  ragotheme:
+    path: ./packages/theme/ragotheme
+
   lottie: ^1.2.2
   flutter_svg: ^1.0.3
-  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:

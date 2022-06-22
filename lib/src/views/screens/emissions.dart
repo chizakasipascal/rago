@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rago/src/constante/assets.dart';
-import 'package:rago/src/constante/fontSize.dart';
-import 'package:rago/src/utils/colors.dart';
+
+import 'package:ragotheme/ragotheme.dart';
 
 class Emissions extends StatelessWidget {
   const Emissions({key}) : super(key: key);
@@ -23,10 +23,10 @@ class Emissions extends StatelessWidget {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: kBlue,
+                    color: kRago,
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: kBlue,
+                      color: kRago,
                       width: 2,
                     ),
                   ),
@@ -37,22 +37,12 @@ class Emissions extends StatelessWidget {
               ),
               const Divider(),
               const SizedBox(height: 10),
-              Text(
+              const Text(
                 "AVOIR ACES A TOUTES LES ÉMISSIONS.",
-                style: GoogleFonts.roboto(
-                  fontSize: FontSize.meduim,
-                  fontWeight: FontWeight.bold,
-                  color: kGrey,
-                ),
               ),
               const SizedBox(height: 10),
-              Text(
+              const Text(
                 "EN TEMPS RÉELS OU EN REDIFFUSIONS",
-                style: GoogleFonts.roboto(
-                  fontSize: FontSize.small,
-                  fontWeight: FontWeight.normal,
-                  color: kGrey,
-                ),
               ),
               const Divider(),
               const SizedBox(height: 10),
@@ -63,7 +53,7 @@ class Emissions extends StatelessWidget {
                       height: size.height * .3,
                       width: size.width * .5,
                       decoration: BoxDecoration(
-                        color: kGrey.withOpacity(.2),
+                        color: kGreyColor.withOpacity(.2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Stack(
@@ -77,19 +67,14 @@ class Emissions extends StatelessWidget {
                               child: Lottie.asset(Assets.favorite),
                             ),
                           ),
-                          Positioned(
+                          const Positioned(
                             left: 0,
                             right: 0,
                             bottom: 40,
                             child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(10.0),
                               child: Text(
                                 "Chaine\nFavorite",
-                                style: GoogleFonts.roboto(
-                                  fontSize: FontSize.lard + 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: kGrey,
-                                ),
                               ),
                             ),
                           ),
@@ -105,7 +90,7 @@ class Emissions extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: kWhiteColor,
                         border: Border.all(
-                          color: kGrey.withOpacity(.3),
+                          color: kGreyColor.withOpacity(.3),
                           width: 3,
                         ),
                         borderRadius: BorderRadius.circular(10),
@@ -127,19 +112,14 @@ class Emissions extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Positioned(
+                          const Positioned(
                             left: 0,
                             right: 0,
                             bottom: 40,
                             child: Padding(
-                              padding: const EdgeInsets.all(10.0),
+                              padding: EdgeInsets.all(10.0),
                               child: Text(
                                 "Vos émissions",
-                                style: GoogleFonts.roboto(
-                                  fontSize: FontSize.lard + 9,
-                                  fontWeight: FontWeight.bold,
-                                  color: kBlue,
-                                ),
                               ),
                             ),
                           ),
@@ -156,7 +136,7 @@ class Emissions extends StatelessWidget {
           height: 80,
           width: size.width,
           decoration: const BoxDecoration(
-            color: kBlue,
+            color: kRago,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
@@ -164,14 +144,9 @@ class Emissions extends StatelessWidget {
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 "DIFFUSER VOTRE ÉMISSION",
-                style: GoogleFonts.roboto(
-                  fontSize: FontSize.lard,
-                  fontWeight: FontWeight.bold,
-                  color: kWhiteColor,
-                ),
               ),
             ],
           ),
