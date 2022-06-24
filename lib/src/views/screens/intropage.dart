@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rago/src/constante/assets.dart';
 
 import 'package:flutter/services.dart';
@@ -91,15 +92,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            const SizedBox(
+                            SizedBox(
                               height: 250,
                               width: 250,
-                              child: Placeholder(),
+                              child: SvgPicture.asset(Assets.poadcast),
                             ),
-                            const SizedBox(height: 10.0),
+                            const SizedBox(height: 100.0),
                             Text(
                               'Rago vous souhaite la bienvenue.',
-                              style: themeData.textTheme.bodyLarge!.copyWith(
+                              style: themeData.textTheme.headline6!.copyWith(
                                 color: kRago,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -108,7 +109,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Text(
                               'Le leader dans le mode FM et \nde la communications.',
                               textAlign: TextAlign.center,
-                              style: themeData.textTheme.bodyText2,
+                              style: themeData.textTheme.bodyLarge,
                             ),
                           ],
                         ),
@@ -117,17 +118,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              const Image(
-                                image: AssetImage(
-                                  Assets.logoRagoS,
-                                ),
-                                height: 300.0,
-                                width: 300.0,
+                              SizedBox(
+                                height: 250,
+                                width: 250,
+                                child: SvgPicture.asset(Assets.recoding),
                               ),
+                              const SizedBox(height: 100.0),
                               Text(
-                                'Le leader dans le mode FM et \nde la communications.',
+                                'Rec.',
                                 textAlign: TextAlign.center,
-                                style: themeData.textTheme.bodyText2,
+                                style: themeData.textTheme.bodyLarge,
                               ),
                             ],
                           ),

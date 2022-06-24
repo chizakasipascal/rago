@@ -3,6 +3,7 @@ class Assets {
   static const String pathAssetsIcon = "assets/icon/";
   static const String pathAssetsGif = "assets/gif/";
   static const String pathAssetsJson = "assets/json/";
+  static const String pathAssetsSvg = "assets/svg/";
   Assets._();
 
   static const String radioOff = "${pathAssetsGif}radio_off.jpg";
@@ -25,4 +26,7 @@ class Assets {
   static const String podcast = "${pathAssetsJson}podcast.svg";
   static const String favorite = "${pathAssetsJson}favorite.json";
   static const String welcome = "${pathAssetsJson}welcome.json";
+//
+  static const String poadcast = "${pathAssetsSvg}podcast.svg";
+  static const String recoding = "${pathAssetsSvg}recording.svg";
 }
