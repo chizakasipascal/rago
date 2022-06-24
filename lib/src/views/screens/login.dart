@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rago/src/constante/route.dart';
+import 'package:rago/src/views/screens/screens.dart';
 import 'package:ragotheme/ragotheme.dart';
-import '../../constante/assets.dart';
-import '../../constante/splashRadiusIconsButtom.dart';
 import '../widgets/backgroundblur.dart';
-import '../widgets/textbox/text_box.dart';
 
 class Login extends StatefulWidget {
   const Login({key}) : super(key: key);
@@ -19,124 +16,123 @@ class _LoginState extends State<Login> {
     final isKeyboard = MediaQuery.of(context).viewInsets.bottom != 0;
     final size = MediaQuery.of(context).size;
     return BuildBackground(
-      child: Center(
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Container(
-              height: size.height * .4,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            top: size.height * .13,
+            left: 20,
+            child: Container(
               width: size.width,
-              decoration: BoxDecoration(
-                  color: kWhiteColor,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: const Offset(0, 3),
-                        color: kGreyColor.withOpacity(.5),
-                        blurRadius: 2.0,
-                        spreadRadius: 2.0)
-                  ]),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "Login",
-                    ),
-                    const SizedBox(height: 20),
-                    Container(
-                      height: 45,
+              padding: const EdgeInsets.only(right: 40),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Login Account",
+                        style: themeData.textTheme.headline6!
+                            .copyWith(color: kRago),
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        "Hello, welcome back to our account",
+                        style: themeData.textTheme.bodyText2,
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  const Icon(
+                    Icons.translate_rounded,
+                    color: kGreyColor,
+                  ),
+                  const Icon(
+                    Icons.arrow_drop_down,
+                    color: kGreyColor,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: size.height * .2),
+            child: DefaultTabController(
+              length: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                    child: Container(
+                      height: 70,
+                      width: size.width,
                       decoration: BoxDecoration(
-                        border: Border.all(color: kRago),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(5),
+                        color: kGreyColor.withOpacity(.1),
                       ),
-                      child: Center(
-                        child: buildTextBox(
-                          hint: "E-mail",
-                          suffixIcon: IconButton(
-                            splashRadius: SplashRadiusIcons.splashRadius,
-                            onPressed: () {},
-                            icon: const Icon(Icons.person),
-                          ),
+                      padding: const EdgeInsets.only(
+                        top: 5,
+                        bottom: 5,
+                      ),
+                      margin: const EdgeInsets.only(right: 5, top: 5),
+                      child: TabBar(
+                        isScrollable: true,
+                        indicatorSize: TabBarIndicatorSize.label,
+                        indicator: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: kWhiteColor,
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Container(
-                      height: 45,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: kRago),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: buildTextBox(
-                          hint: "Mot de passe",
-                          isPassword: true,
-                          suffixIcon: IconButton(
-                            splashRadius: SplashRadiusIcons.splashRadius,
-                            onPressed: () {},
-                            icon: const Icon(Icons.lock),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    Center(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
+                        labelPadding: const EdgeInsets.only(left: 5, right: 5),
+                        labelStyle: themeData.textTheme.bodyText2,
+                        tabs: [
+                          Tab(
+                            child: Container(
+                              width: size.width * .5,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Email",
+                                  style: themeData.textTheme.bodyText2,
+                                ),
                               ),
                             ),
                           ),
-                          onPressed: () => Navigator.pushReplacementNamed(
-                              context, Routes.acceuil),
-                          child: const Text(
-                            "Connexion",
+                          Tab(
+                            child: Container(
+                              width: size.width * .5,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Phone number",
+                                  style: themeData.textTheme.bodyText2,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: -40,
-              left: 0,
-              right: 0,
-              child: Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                    color: kWhiteColor,
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                          offset: const Offset(0, 3),
-                          color: kGreyColor.withOpacity(.5),
-                          blurRadius: 2.0,
-                          spreadRadius: 2.0)
-                    ]),
-                child: Center(
-                  child: SizedBox(
-                    height: 100,
-                    width: 100,
-                    child: Image.asset(
-                      Assets.logoRagoS,
-                      fit: BoxFit.cover,
                     ),
                   ),
-                ),
+                  const Expanded(
+                    child: TabBarView(
+                      children: [
+                        EmailLogin(),
+                        PhoneLogin(),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

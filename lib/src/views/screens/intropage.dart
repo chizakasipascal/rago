@@ -125,7 +125,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                               const SizedBox(height: 100.0),
                               Text(
-                                'Rec.',
+                                'Enregistre vos émissions préfères\net le réécoutes.',
                                 textAlign: TextAlign.center,
                                 style: themeData.textTheme.bodyLarge,
                               ),
