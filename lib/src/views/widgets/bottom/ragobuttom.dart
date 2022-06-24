@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ragotheme/ragotheme.dart';
 
 class RagoButtom extends StatelessWidget {
+  final double width, height;
   final String descriprion;
   final ButtonStyle? style;
   final Color colortextStyle;
@@ -12,13 +13,15 @@ class RagoButtom extends StatelessWidget {
     this.style,
     required this.onPressed,
     this.colortextStyle = kWhiteColor,
+    this.width = 110.11,
+    this.height = 25.81,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 110.11,
-      height: 25.81,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: style,
         onPressed: onPressed,
