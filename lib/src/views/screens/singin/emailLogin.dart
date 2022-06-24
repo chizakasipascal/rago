@@ -7,6 +7,10 @@ class EmailLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('q');
+    return Column(
+      children: const [
+        Text('q'),
+      ],
+    );
   }
 }
