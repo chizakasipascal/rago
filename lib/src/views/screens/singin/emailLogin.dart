@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'email/loginScreen.dart';
+
 class EmailLogin extends StatelessWidget {
   const EmailLogin({
     Key? key,
@@ -7,10 +9,6 @@ class EmailLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        Text('q'),
-      ],
-    );
+    return LoginScreen();
   }
 }
