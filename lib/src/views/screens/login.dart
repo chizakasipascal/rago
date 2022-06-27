@@ -95,7 +95,7 @@ class _LoginState extends State<Login> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Email",
+                                  "E-mail",
                                   style: themeData.textTheme.bodyText2,
                                 ),
                               ),
@@ -110,7 +110,7 @@ class _LoginState extends State<Login> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Phone number",
+                                  "Telephone",
                                   style: themeData.textTheme.bodyText2,
                                 ),
                               ),
@@ -122,6 +122,7 @@ class _LoginState extends State<Login> {
                   ),
                   const Expanded(
                     child: TabBarView(
+                      physics: NeverScrollableScrollPhysics(),
                       children: [
                         EmailLogin(),
                         Register(),

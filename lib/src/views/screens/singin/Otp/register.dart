@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ragotheme/ragotheme.dart';
 
+import '../../../widgets/widget.dart';
 import '../../screens.dart';
 
 class Register extends StatefulWidget {
@@ -15,19 +16,15 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
-      child: ListView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Phone number',
-            style: themeData.textTheme.headline6!.copyWith(color: kRago),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            "Add your phone number. we'll send you a verification code so we know you're real",
+            "Ajoutez votre numéro de téléphone. nous vous enverrons un code de vérification afin que nous sachions que vous êtes réel",
             style: themeData.textTheme.bodyText2,
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10.0),
             child: Column(
@@ -58,21 +55,21 @@ class _RegisterState extends State<Register> {
                 const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: SizedBox(
-                    width: 120,
-                    child: MaterialButton(
-                      color: kRago,
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const Otp()),
-                        );
-                      },
-                      child: Text(
-                        'Send',
-                        style: themeData.textTheme.bodyText2!
-                            .copyWith(color: kWhiteColor),
-                      ),
-                    ),
+                  child: RagoButtom(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => const Otp()),
+                      );
+                    },
+                    descriprion: "Soumetre", //l10n.seconnecter,
+                    style:
+                        Theme.of(context).elevatedButtonTheme.style!.copyWith(
+                              foregroundColor:
+                                  MaterialStateProperty.all(kWhiteColor),
+                              overlayColor: MaterialStateProperty.all(
+                                kGreyColor.withOpacity(.5),
+                              ),
+                            ),
                   ),
                 ),
               ],
