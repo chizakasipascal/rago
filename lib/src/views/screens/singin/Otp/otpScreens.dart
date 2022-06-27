@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rago/src/views/screens/accuil.dart';
+import 'package:rago/src/constante/route.dart';
+
 import 'package:ragotheme/ragotheme.dart';
 
 import '../../../widgets/backgroundblur.dart';
@@ -66,13 +67,8 @@ class _OtpState extends State<Otp> {
                     child: SizedBox(
                       height: 35,
                       child: RagoButtom(
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const Acceuil(),
-                            ),
-                          );
-                        },
+                        onPressed: () =>
+                            Navigator.pushNamed(context, Routes.page),
                         descriprion: "Verification", //l10n.seconnecter,
                         style: Theme.of(context)
                             .elevatedButtonTheme
