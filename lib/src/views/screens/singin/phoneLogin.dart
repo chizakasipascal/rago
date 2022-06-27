@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screens.dart';
-
 class PhoneLogin extends StatelessWidget {
   const PhoneLogin({
     Key? key,
@@ -9,6 +7,6 @@ class PhoneLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Register();
+    return const PhoneLogin();
   }
 }

@@ -124,7 +124,7 @@ class _LoginState extends State<Login> {
                     child: TabBarView(
                       children: [
                         EmailLogin(),
-                        PhoneLogin(),
+                        Register(),
                       ],
                     ),
                   ),
