@@ -1,5 +1,5 @@
 export 'login.dart';
-export 'about.dart';
+
 export 'homeRago.dart';
 export 'favorite.dart';
 export 'poadcast.dart';

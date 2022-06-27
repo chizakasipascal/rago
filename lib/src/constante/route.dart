@@ -19,6 +19,5 @@ class Routes {
     login: (BuildContext context) => const Login(),
     register: (BuildContext context) => const RegisterEmail(),
     page: (BuildContext context) => const PageNav(),
-    apropos: (BuildContext context) => const About(),
   };
 }

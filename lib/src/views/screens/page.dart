@@ -32,94 +32,87 @@ class _PageState extends State<PageNav> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        // const BuildBackground(
-        //   child: ,
-        // ),
-        Scaffold(
-          appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(80.0),
-            child: AppBar(
-              elevation: 0.0,
-              backgroundColor: kRago,
-              centerTitle: true,
-              leading: const SizedBox.shrink(),
-              title: Text(
-                _selectedIndex == 0
-                    ? "Acceuiller"
-                    : _selectedIndex == 1
-                        ? "Favorite"
-                        : _selectedIndex == 2
-                            ? "Poadcast"
-                            : "Telephone",
-                style: themeData.textTheme.headline6!.copyWith(
-                  color: kWhiteColor,
-                ),
-              ),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(80.0),
+        child: AppBar(
+          elevation: 0.0,
+          backgroundColor: kRago,
+          centerTitle: true,
+          leading: const SizedBox.shrink(),
+          title: Text(
+            _selectedIndex == 0
+                ? "Acceuiller"
+                : _selectedIndex == 1
+                    ? "Favorite"
+                    : _selectedIndex == 2
+                        ? "Poadcast"
+                        : "Telephone",
+            style: themeData.textTheme.headline6!.copyWith(
+              color: kWhiteColor,
             ),
-          ),
-          bottomNavigationBar: ScrolHide(
-            controller: controller,
-            child: BottomNavigationBar(
-              items: [
-                const BottomNavigationBarItem(
-                  icon: SizedBox(
-                    child: Icon(FeatherIcons.home),
-                  ),
-                  label: "Rago",
-                ),
-                BottomNavigationBarItem(
-                  icon: SizedBox(
-                    height: height,
-                    child: const Icon(FeatherIcons.heart),
-                  ),
-                  label: "Favorie",
-                ),
-                BottomNavigationBarItem(
-                  icon: SizedBox(
-                    height: height,
-                    child: const Icon(FeatherIcons.headphones),
-                  ),
-                  label: "Poadcast",
-                ),
-                BottomNavigationBarItem(
-                  icon: SizedBox(
-                    height: height,
-                    child: const Icon(FeatherIcons.user),
-                  ),
-                  label: "Telephone",
-                ),
-              ],
-              onTap: _onTappedBar,
-              type: BottomNavigationBarType.fixed,
-              backgroundColor: Colors.transparent,
-              elevation: 0.0,
-              currentIndex: _selectedIndex,
-              selectedItemColor: kRago,
-              unselectedItemColor: kGreyColor,
-              unselectedLabelStyle: themeData.textTheme.overline,
-              selectedLabelStyle: themeData.textTheme.caption,
-            ),
-          ),
-          body: PageView(
-            controller: _pageController,
-            physics: const NeverScrollableScrollPhysics(),
-            children: <Widget>[
-              HomeRago(controller: controller),
-              Favorite(controller: controller),
-              Poadcast(controller: controller),
-              Telephone(controller: controller),
-            ],
-            onPageChanged: (page) {
-              setState(() {
-                _selectedIndex = page;
-                debugPrint(page.toString());
-              });
-            },
           ),
         ),
-      ],
+      ),
+      bottomNavigationBar: ScrolHide(
+        controller: controller,
+        child: BottomNavigationBar(
+          items: [
+            const BottomNavigationBarItem(
+              icon: SizedBox(
+                child: Icon(FeatherIcons.home),
+              ),
+              label: "Rago",
+            ),
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: height,
+                child: const Icon(FeatherIcons.heart),
+              ),
+              label: "Favorie",
+            ),
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: height,
+                child: const Icon(FeatherIcons.headphones),
+              ),
+              label: "Poadcast",
+            ),
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: height,
+                child: const Icon(FeatherIcons.user),
+              ),
+              label: "Telephone",
+            ),
+          ],
+          onTap: _onTappedBar,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          currentIndex: _selectedIndex,
+          selectedItemColor: kRago,
+          unselectedItemColor: kGreyColor,
+          unselectedLabelStyle: themeData.textTheme.overline,
+          selectedLabelStyle: themeData.textTheme.caption,
+        ),
+      ),
+      body: PageView(
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: <Widget>[
+          HomeRago(controller: controller),
+          Favorite(controller: controller),
+          Poadcast(controller: controller),
+          Telephone(controller: controller),
+        ],
+        onPageChanged: (page) {
+          setState(() {
+            _selectedIndex = page;
+            debugPrint(page.toString());
+          });
+        },
+      ),
     );
   }
 }
