@@ -46,9 +46,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    setState(() {
+      _currentPage;
+    });
     return BuildBackground(
       child: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
+        value: SystemUiOverlayStyle.dark
+            .copyWith(systemNavigationBarColor: Colors.transparent),
         child: Stack(
           children: [
             Positioned(

@@ -6,7 +6,6 @@ class Routes {
   Routes._();
   static const initPage = '/initPage';
   static const homeScreen = '/homeScreens';
-  static const acceuil = '/acceuil';
   static const radio = '/radio';
   static const login = '/login';
   static const register = '/register';
@@ -20,11 +19,5 @@ class Routes {
     login: (BuildContext context) => const Login(),
     register: (BuildContext context) => const RegisterEmail(),
     page: (BuildContext context) => const PageNav(),
-    homeScreen: (BuildContext context) => const HomeScreen(),
-    acceuil: (BuildContext context) => const Acceuil(),
-    radio: (BuildContext context) => const RadioStation(),
-    contact: (BuildContext context) => const Contact(),
-    apropos: (BuildContext context) => const About(),
-    emissions: (BuildContext context) => const Emissions(),
   };
 }

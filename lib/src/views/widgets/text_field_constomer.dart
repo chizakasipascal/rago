@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ragotheme/ragotheme.dart';
 
+import 'widget.dart';
+
 typedef String Validator(string);
 typedef void OnSaved(string);
 
@@ -41,6 +43,7 @@ class TextFieldCustomer extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10.0, right: 10.0),
           child: TextFormField(
             enabled: enable,
+            maxLength: 25,
             keyboardType: inputType,
             obscureText: isPassword,
             controller: controller,
@@ -49,6 +52,7 @@ class TextFieldCustomer extends StatelessWidget {
             textAlign: textAlign,
             style: themeData.textTheme.bodyText2,
             decoration: InputDecoration(
+              counterText: '',
               border: InputBorder.none,
               filled: true,
               fillColor: Colors.transparent,
@@ -69,7 +73,7 @@ class TextFieldCustomer extends StatelessWidget {
             onSaved: onSaved,
           ),
         ),
-        // LineWithCircleRoundConer(isEmptyOne: isEmptyOne, size: size)
+        LineWithCircleRoundConer(isEmptyOne: isEmptyOne, size: size)
       ],
     );
   }

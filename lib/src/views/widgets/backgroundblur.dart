@@ -28,10 +28,10 @@ class BuildBackground extends StatelessWidget {
               ),
             ),
           ),
-          ConstrainedBox(
-            constraints: const BoxConstraints.expand(),
-            child: const FlutterLogo(),
-          ),
+          // ConstrainedBox(
+          //   constraints: const BoxConstraints.expand(),
+          //   child: const FlutterLogo(),
+          // ),
           BackdropFilter(
             filter: ImageFilter.blur(sigmaX: sigmaX, sigmaY: sigmaY),
             child: child,

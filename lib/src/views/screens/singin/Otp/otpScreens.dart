@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rago/src/views/screens/accuil.dart';
+import 'package:rago/src/constante/route.dart';
+
 import 'package:ragotheme/ragotheme.dart';
 
 import '../../../widgets/backgroundblur.dart';
+import '../../../widgets/widget.dart';
 
 class Otp extends StatefulWidget {
   const Otp({Key? key}) : super(key: key);
@@ -16,30 +18,30 @@ class _OtpState extends State<Otp> {
   Widget build(BuildContext context) {
     return BuildBackground(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Stack(
           children: [
             Positioned(
-              top: 80,
+              top: 90,
               child: GestureDetector(
                 onTap: () => Navigator.pop(context),
                 child: const Icon(
                   Icons.arrow_back,
-                  size: 32,
+                  size: 22,
                   color: kGreyColor,
                 ),
               ),
             ),
             Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
-                'Verification',
+                'Verification.',
                 style: themeData.textTheme.headline6!.copyWith(color: kRago),
               ),
               const SizedBox(
                 height: 10,
               ),
               Text(
-                "Enter your OTP code number",
+                "Entrez le numéro de code.",
                 style: themeData.textTheme.bodyText2,
                 textAlign: TextAlign.center,
               ),
@@ -63,21 +65,21 @@ class _OtpState extends State<Otp> {
                   Align(
                     alignment: Alignment.centerRight,
                     child: SizedBox(
-                      width: 120,
-                      child: MaterialButton(
-                        color: kRago,
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const Acceuil(),
+                      height: 35,
+                      child: RagoButtom(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, Routes.page),
+                        descriprion: "Verification", //l10n.seconnecter,
+                        style: Theme.of(context)
+                            .elevatedButtonTheme
+                            .style!
+                            .copyWith(
+                              foregroundColor:
+                                  MaterialStateProperty.all(kWhiteColor),
+                              overlayColor: MaterialStateProperty.all(
+                                kGreyColor.withOpacity(.5),
+                              ),
                             ),
-                          );
-                        },
-                        child: Text(
-                          'Verify',
-                          style: themeData.textTheme.bodyText2!
-                              .copyWith(color: kWhiteColor),
-                        ),
                       ),
                     ),
                   ),
@@ -91,16 +93,14 @@ class _OtpState extends State<Otp> {
               child: Column(
                 children: [
                   Text(
-                    "Didn't you receive any code?",
-                    style: themeData.textTheme.bodyText2,
+                    "Vous n'avez pas reçu de code ?.",
+                    style: themeData.textTheme.bodySmall,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(
-                    height: 18,
-                  ),
+                  const SizedBox(height: 8),
                   Text(
-                    "Resend New Code",
-                    style: themeData.textTheme.bodyText2,
+                    "Renvoyer le nouveau code.",
+                    style: themeData.textTheme.bodySmall,
                     textAlign: TextAlign.center,
                   ),
                 ],

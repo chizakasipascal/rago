@@ -8,12 +8,11 @@ import 'font_family.dart';
 
 const Color colorDefaultFont = kGreyColor;
 final ThemeData themeData = ThemeData(
-  brightness: Brightness.dark,
   fontFamily: Platform.isAndroid
       ? GoogleFonts.roboto().fontFamily
       : FontFamily.sanFrancisco,
   appBarTheme: const AppBarTheme(
-    systemOverlayStyle: SystemUiOverlayStyle.light, // 2
+    systemOverlayStyle: SystemUiOverlayStyle.dark,
   ),
   textTheme: Platform.isAndroid
       ? TextTheme(
