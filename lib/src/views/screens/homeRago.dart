@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_radio/flutter_radio.dart';
+import 'package:ragotheme/ragotheme.dart';
 
 class HomeRago extends StatefulWidget {
   const HomeRago({
@@ -36,14 +37,13 @@ class _HomeRagoState extends State<HomeRago> {
       color: Colors.blueGrey.shade900,
       child: Column(
         children: <Widget>[
-          const Expanded(
-            flex: 7,
-            child: Icon(
-              Icons.radio,
-              size: 250,
-              color: Colors.white,
-            ),
+          Expanded(
+            flex: 5,
+            child: Image.network(
+                "https://www.radiomaria.cd/wp-content/uploads/2022/05/logo-170x170.png"),
           ),
+          Text("Radio Maria FM Nord-kivu",
+              style: themeData.textTheme.bodyText2),
           Padding(
             padding: const EdgeInsets.only(right: 40),
             child: Align(
