@@ -73,12 +73,12 @@ class LoginScreen extends StatelessWidget {
               Navigator.pushNamed(context, Routes.page);
             },
             descriprion: "Se Connecter", //l10n.seconnecter,
-            style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
-                  foregroundColor: MaterialStateProperty.all(kWhiteColor),
-                  overlayColor: MaterialStateProperty.all(
-                    kGreyColor.withOpacity(.5),
-                  ),
-                ),
+            style: themeData.elevatedButtonTheme.style!.copyWith(
+              foregroundColor: MaterialStateProperty.all(kWhiteColor),
+              overlayColor: MaterialStateProperty.all(
+                kGreyColor.withOpacity(.5),
+              ),
+            ),
           ),
           const SizedBox(height: 20),
           Row(
